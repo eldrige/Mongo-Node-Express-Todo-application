@@ -71,6 +71,7 @@ router.post('/add', (req, res) => {
   console.log(newTodo);
 });
 
+// ! Deleting a todo
 router.delete('/:id', (req, res) => {
   // the remove gets it off the database
   Todo.remove({ _id: req.params.id })

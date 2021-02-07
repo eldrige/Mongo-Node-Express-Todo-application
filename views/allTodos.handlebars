@@ -6,6 +6,7 @@
       <th scope="col">Title</th>
       <th scope="col">Description</th>
       <th scope="col">Completed</th>
+      <th scope="col">Date Created</th>
       <th scope="col">action</th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
       <td>{{this.title}}</td>
       <td>{{this.description}}</td>
       <td>{{this.complete}}</td>
+      <td>{{this.createdAt}}</td>
       <td class="d-flex justify-content-evenly">
 
         <a href="/todos/edit/{{_id}}" class="btn btn-primary">Edit</a>
