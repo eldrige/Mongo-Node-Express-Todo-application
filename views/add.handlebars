@@ -1,0 +1,15 @@
+<div class="container my-5">
+  {{!-- <h2 class="heading text-center"></h2> --}}
+  <form action="/todos/add" method="POST">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Title</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="title" name="title">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput2" class="form-label">Description</label>
+      <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="a brief description"
+        name="description">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

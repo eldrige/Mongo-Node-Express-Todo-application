@@ -1,0 +1,36 @@
+<table class="table my-5">
+  <h2 class="text-center mt-3">All Todos</h2>
+  <thead>
+    <tr>
+      {{!-- <th scope="col">#</th> --}}
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Completed</th>
+      <th scope="col">action</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {{#each todos}}
+    <tr>
+      <td>{{this.title}}</td>
+      <td>{{this.description}}</td>
+      <td>{{this.complete}}</td>
+      <td class="d-flex justify-content-evenly">
+
+        <a href="/todos/edit/{{_id}}" class="btn btn-primary">Edit</a>
+        <form method="post" action="/todos/{{_id}}?_method=DELETE">
+          <input type="hidden" name="_method" value="DELETE">
+          <input type="submit" class="btn btn-danger " value="Delete">
+        </form>
+      </td>
+    </tr>
+    {{else}}
+    <p>
+      No todos found!
+      Please check your connection
+    </p>
+    {{/each}}
+
+  </tbody>
+</table>
